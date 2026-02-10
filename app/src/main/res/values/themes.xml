@@ -26,4 +26,11 @@
     </style>
 
     <style name="Theme.Islami" parent="Base.Theme.Islami" />
+    <style name="SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/app_logo</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="windowSplashScreenBackground">@color/black</item>
+        <item name="postSplashScreenTheme">@style/Theme.Islami</item>
+
+    </style>
 </resources>

@@ -13,6 +13,7 @@
         android:theme="@style/Theme.Islami">
         <activity
             android:name=".HomeActivity"
+            android:theme="@style/SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

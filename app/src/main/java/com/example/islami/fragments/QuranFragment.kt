@@ -5,14 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.islami.adapters.ChaptersAdapter
 import com.example.islami.databinding.FragmentQuranBinding
+import models.ChapterDM
 
 class QuranFragment : Fragment() {
     private lateinit var binding: FragmentQuranBinding
-
+    private lateinit var adapter: ChaptersAdapter
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentQuranBinding.inflate(inflater, container, false)
@@ -21,7 +24,29 @@ class QuranFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initChaptersRecyclerView()
     }
 
+    private fun initChaptersRecyclerView() {
+        adapter = ChaptersAdapter(ChapterDM.getChaptersList())
+        binding.surasRecyclerView.adapter = adapter
+//        adapter.onChapterClickListener = object : OnChapterClickListener {
+//            override fun onChapterClick(
+//                chapterDM: ChapterDM,
+//                position: Int
+//            ) {
+//                if (context != null) {
+//                    val intent = Intent(context, ChapterDetailsActivity::class.java)
+//                    intent.putExtra(ChapterDetailsKeys.englishName, chapterDM.englishName)
+//                    intent.putExtra(ChapterDetailsKeys.arabicName, chapterDM.arabicName)
+//                    intent.putExtra(ChapterDetailsKeys.index, chapterDM.index)
+//                    startActivity(intent)
+//                }
+//            }
+//
+//        }
+
+    }
 
 }
+
