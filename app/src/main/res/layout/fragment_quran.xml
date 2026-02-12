@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/quran_bg"
     android:paddingHorizontal="25dp"
-    tools:context=".fragments.QuranFragment">
+    tools:context=".fragments.Quran.QuranFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView

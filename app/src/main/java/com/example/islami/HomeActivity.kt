@@ -6,10 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.Fragment
 import com.example.islami.databinding.ActivityHomeBinding
-import com.example.islami.fragments.HadethFragment
-import com.example.islami.fragments.QuranFragment
-import com.example.islami.fragments.RadioFragment
-import com.example.islami.fragments.SebhaFragment
+import com.example.islami.fragments.hadeth.HadethFragment
+import com.example.islami.fragments.Quran.QuranFragment
+import com.example.islami.fragments.radio.RadioFragment
+import com.example.islami.fragments.sebha.SebhaFragment
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
