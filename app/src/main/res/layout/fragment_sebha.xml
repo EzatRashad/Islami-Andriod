@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/sebha_bg"
     android:paddingHorizontal="25dp"
-    android:paddingTop="30dp"
-    tools:context=".fragments.sebha.SebhaFragment">
+    android:paddingTop="30dp">
 
+    <!-- Title -->
     <ImageView
         android:id="@+id/quran_image_title"
         android:layout_width="0dp"
@@ -16,46 +17,70 @@
         android:layout_marginBottom="24dp"
         android:adjustViewBounds="true"
         android:src="@drawable/quran_title"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <TextView
-        android:id="@+id/sebha_count"
-        style="@style/LargeText"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/Sebha"
-        android:gravity="center"
-        android:padding="24dp"
-        android:textColor="@color/white"
-
-        app:autoSizeMaxTextSize="40sp"
-        app:autoSizeMinTextSize="14sp"
-        app:autoSizeStepGranularity="2sp"
-        app:autoSizeTextType="uniform"
-
-        app:layout_constraintBottom_toTopOf="@id/resetBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <!-- Sebha Head -->
+    <ImageView
+        android:id="@+id/sebha_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sebha1"
         app:layout_constraintTop_toBottomOf="@id/quran_image_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-        tools:text="100" />
+    <FrameLayout
+        android:id="@+id/sebha_container"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        app:layout_constraintTop_toBottomOf="@id/sebha_head"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/sebha_count_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:src="@drawable/sebha2"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/sebha_count_text"
+            style="@style/LargeText"
+            android:layout_width="match_parent"
+            android:layout_height="283dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            tools:text="100" />
+
+        <TextView
+            android:id="@+id/zekrText"
+            style="@style/LargeText"
+            android:layout_width="match_parent"
+            android:layout_height="108dp"
+             android:gravity="center_vertical|bottom|center"
+            android:text="سبحان الله"
+            android:textSize="22sp" />
+
+    </FrameLayout>
+
 
     <Button
         android:id="@+id/resetBtn"
         android:layout_width="180dp"
         android:layout_height="50dp"
-        android:backgroundTint="@color/gold"
         android:text="@string/reset"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="50dp"
-android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/gold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/sebha_container"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sebha_count" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
