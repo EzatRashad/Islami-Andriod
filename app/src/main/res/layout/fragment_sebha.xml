@@ -25,7 +25,7 @@
         style="@style/LargeText"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/Sebha"
         android:gravity="center"
         android:padding="24dp"
@@ -51,7 +51,8 @@
         android:text="@string/reset"
         android:textSize="18sp"
         android:textStyle="bold"
-
+        android:layout_marginBottom="50dp"
+android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
